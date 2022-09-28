@@ -1,0 +1,46 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>contacto</title>  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"> 
+     
+</head>  
+<body>  
+<table class="table table-striped table-bordered table-sm">  
+    <thead class="thead-dark">  
+    <tr>  
+        <th>Nombre</th>  
+        <th>Edad</th>  
+        <th>Peso</th> 
+        <th>Frecuencia cardiaca</th>  
+        <th>Medida en BPM</th>  
+        <th>Saturacion de oxigeno en sangre</th> 
+        <th>Nivel de stress</th>
+        <th>Actions</th> 
+    </tr>  
+    </thead>  
+    <tbody>  
+{% for smartband in smartband %}  
+    <tr>  
+        <td>{{ smartband.name}}</td>  
+        <td>{{ smartband.age }}</td>  
+        <td>{{ smartband.weight }}</td>  
+        <td>{{ smartband.heart_rate }}</td>  
+        <td>{{ smartband.BPM }}</td>  
+        <td>{{ smartband.Sp_o }}</td>
+        <td>{{ smartband.level_stress}}</td>
+
+        <td>  
+            <a href="/edit/{{ smartband.pk}}"><span class="glyphicon glyphicon-pencil" >Editar</span></a>  
+            <a href="/delete/{{ smartband.pk }}">Eliminar</a>  
+        </td>  
+    </tr>  
+{% endfor %}  
+    </tbody>  
+</table>  
+<br>  
+<br>  
+<center><a href="/smt" class="btn btn-primary">Añadir</a></center>  
+</body>  
+</html>

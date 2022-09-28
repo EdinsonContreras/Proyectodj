@@ -1,0 +1,72 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>Index</title>  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+     
+</head>  
+<body>  
+<form method="POST" class="post-form" action="/smt">  
+        {% csrf_token %}  
+    <div class="container">  
+<br>  
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <h3>Metricas de salud basicas</h3>  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Nombre:</label>  
+    <div class="col-sm-4">  
+      {{ form.name }}  
+    </div>  
+  </div>  
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Edad:</label>  
+    <div class="col-sm-4">  
+      {{ form.age }}  
+    </div>  
+  </div>  
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Peso:</label>  
+    <div class="col-sm-4">  
+      {{ form.weight }}  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Frecuencia cardiaca:</label>  
+    <div class="col-sm-4">  
+      {{ form.heart_rate }}  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Medida en BPM:</label>  
+    <div class="col-sm-4">  
+      {{ form.BPM }}  
+    </div>  
+  </div>
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Saturacion de oxigeno en sangre:</label>  
+    <div class="col-sm-4">  
+      {{ form.Sp_o}}  
+    </div> 
+  </div> 
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Nivel de stress:</label>  
+    <div class="col-sm-4">  
+      {{ form.level_stress}}  
+    </div>  
+   </div>    
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <button type="submit" class="btn btn-primary">Submit</button>  
+    </div>  
+  </div>  
+    </div>  
+</form>  
+</body>  
+</html>  
